@@ -1,8 +1,21 @@
 node-http2
-==========
+=========
+
+
+
+
 
 An HTTP/2 ([RFC 7540](http://tools.ietf.org/html/rfc7540))
 client and server implementation for node.js.
+
+
+实现了server push 功能！
+实现了server push+SSE功能！但是关闭客户端则后端报错，目前无解。
+
+运行方式：node server.js 
+server push实现:https://127.0.0.1:8091/index.html?push=1
+server push +SSE:https://127.0.0.1:8091/index.html
+
 
 ![Travis CI status](https://travis-ci.org/molnarg/node-http2.svg?branch=master)
 
@@ -155,7 +168,7 @@ Code contributions are always welcome! People who contributed to node-http2 so f
 * [Yoshihiro Iwanaga](https://github.com/iwanaga)
 * [Igor Novikov](https://github.com/vsemogutor)
 * [James Willcox](https://github.com/snorp)
-* [David Björklund](https://github.com/kesla)
+* [David Bjรถrklund](https://github.com/kesla)
 * [Patrick McManus](https://github.com/mcmanus)
 
 Special thanks to Google for financing the development of this module as part of their [Summer of
@@ -168,4 +181,4 @@ License
 
 The MIT License
 
-Copyright (C) 2013 Gábor Molnár <gabor@molnar.es>
+Copyright (C) 2013 Gรกbor Molnรกr <gabor@molnar.es>
