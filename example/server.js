@@ -25,9 +25,8 @@ function onRequest(request, response) {
   // Reading file from disk if it exists and is safe.
   else if ((filename.indexOf(__dirname) === 0) && fs.existsSync(filename) && fs.statSync(filename).isFile()) {
     response.writeHead(200);
-    var fileStream = fs.createReadStream(filename);
-    fileStream.pipe(response);
-    fileStream.on('finish',response.end);
+
+    fs.createReadStream(filename).pipe(response);
   }
 
   // Otherwise responding with 404.
